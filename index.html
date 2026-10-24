@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10151f">
+    <title>Sanket Sharma | Connectly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="brand" href="#home"><span class="brand-mark">S</span><span>SANKET<span class="brand-light">.DEV</span></span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="#tasks">Task Board</a>
+            </div>
+            <a class="nav-cta" href="#contact">Let's connect <span>↗</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR IDEAS & COLLABORATION</p>
+                <h1>Building digital<br>experiences with<br><span>purpose.</span></h1>
+                <p class="hero-description">Hey, I'm <strong>Sanket Sharma</strong> — a CSE student exploring web development and building clean, useful digital experiences. Have an idea? Let's start a conversation.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#contact">Get in touch <span>↗</span></a>
+                    <a class="text-link" href="#tasks">Explore task board ↓</a>
+                </div>
+                <div class="hero-stats">
+                    <div><strong>01</strong><span>CONTACT FORM</span></div>
+                    <div><strong>02</strong><span>RESPONSIVE UI</span></div>
+                    <div><strong>03</strong><span>JAVASCRIPT</span></div>
+                </div>
+            </div>
+            <div class="hero-art" aria-label="Decorative developer dashboard illustration">
+                <div class="art-grid"></div>
+                <div class="code-window">
+                    <div class="window-head"><div class="window-dots"><i></i><i></i><i></i></div><span>hello-world.js</span><span class="window-lock">⌘</span></div>
+                    <div class="code-body">
+                        <p><span class="line-no">01</span><span class="code-purple">const</span> developer = {</p>
+                        <p><span class="line-no">02</span>&nbsp;&nbsp;name: <span class="code-green">'Sanket Sharma'</span>,</p>
+                        <p><span class="line-no">03</span>&nbsp;&nbsp;focus: <span class="code-green">'Web Development'</span>,</p>
+                        <p><span class="line-no">04</span>&nbsp;&nbsp;curiosity: <span class="code-orange">Infinity</span>,</p>
+                        <p><span class="line-no">05</span>&nbsp;&nbsp;building: <span class="code-green">'Something useful'</span></p>
+                        <p><span class="line-no">06</span>};</p>
+                        <p class="code-last"><span class="line-no">07</span><span class="code-purple">console</span>.log(<span class="code-green">'Let's build!'</span>); <span class="cursor"></span></p>
+                    </div>
+                    <div class="window-footer"><span><i class="tiny-green"></i> All systems operational</span><span>UTF-8&nbsp; • &nbsp;JavaScript</span></div>
+                </div>
+                <div class="floating-chip chip-top"><span>✦</span> DESIGN WITH INTENT</div>
+                <div class="floating-chip chip-bottom"><span class="chip-dot"></span> LEARNING BY BUILDING</div>
+                <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+            </div>
+        </section>
+
+        <section class="contact-section section-pad" id="contact">
+            <div class="container contact-grid">
+                <div class="section-intro">
+                    <p class="eyebrow">01 / CONTACT</p>
+                    <h2>Have a project<br>in <span>mind?</span></h2>
+                    <p>Share your idea, question, or collaboration opportunity. Fill in the form and check your details before submitting.</p>
+                    <div class="contact-detail"><span class="detail-icon">✉</span><div><small>EMAIL</small><strong>Let's start a conversation</strong></div></div>
+                    <div class="contact-detail"><span class="detail-icon">⌁</span><div><small>FOCUS</small><strong>Web development & learning</strong></div></div>
+                    <div class="mini-note"><span>✳</span><p>Thoughtful design. Clear code.<br>One step at a time.</p></div>
+                </div>
+                <div class="form-card">
+                    <div class="form-heading"><div><p class="eyebrow">CONTACT FORM</p><h3>Send a message<span class="accent-dot">.</span></h3></div><span class="form-number">01—04</span></div>
+                    <form id="contactForm" novalidate>
+                        <div class="field-row">
+                            <div class="form-field"><label for="fullName">Full name <span>*</span></label><input id="fullName" name="fullName" type="text" placeholder="Your full name" autocomplete="name" required><small class="error-message" id="nameError"></small></div>
+                            <div class="form-field"><label for="email">Email address <span>*</span></label><input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required><small class="error-message" id="emailError"></small></div>
+                        </div>
+                        <div class="form-field"><label for="subject">Topic <span>*</span></label><select id="subject" name="subject" required><option value="">Select a topic</option><option>Website / Web Development</option><option>Project Collaboration</option><option>Internship / Learning</option><option>Other enquiry</option></select><small class="error-message" id="subjectError"></small></div>
+                        <div class="form-field"><label for="message">Message <span>*</span></label><textarea id="message" name="message" rows="4" maxlength="500" placeholder="Tell me a little about your idea..." required></textarea><div class="field-bottom"><small class="error-message" id="messageError"></small><small class="char-count"><span id="charCount">0</span>/500</small></div></div>
+                        <label class="check-row"><input type="checkbox" id="consent"><span>I agree to be contacted about this message.</span></label><small class="error-message" id="consentError"></small>
+                        <button class="button button-primary submit-button" type="submit">Validate message <span>↗</span></button>
+                        <p class="form-footnote">* Required fields · Front-end demo</p>
+                        <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden><strong>✓ Validation successful.</strong> Your details look good. This demo does not send data online.</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="tasks-section section-pad" id="tasks">
+            <div class="container">
+                <div class="tasks-heading"><div><p class="eyebrow">02 / PRODUCTIVITY</p><h2>Make space for<br><span>what's next.</span></h2></div><p class="tasks-intro">A focused task board for ideas, goals, and daily progress. Add a task, set its priority, and mark it done when you get there.</p></div>
+                <div class="task-board">
+                    <div class="task-topline"><div><span class="board-indicator"></span><strong>Sanket's task board</strong><span class="board-label">PERSONAL WORKSPACE</span></div><div class="task-progress"><span id="taskProgressText">0 of 0 completed</span><div class="progress-track"><span id="progressFill"></span></div></div></div>
+                    <form class="add-task-form" id="taskForm"><label class="sr-only" for="taskInput">New task</label><input id="taskInput" type="text" maxlength="100" placeholder="What do you want to get done?" required><select id="taskPriority" aria-label="Task priority"><option value="normal">Normal priority</option><option value="high">High priority</option><option value="low">Low priority</option></select><button class="button button-primary" type="submit">+ Add task</button></form>
+                    <div class="task-filters" role="group" aria-label="Filter tasks"><button type="button" class="filter-button active" data-filter="all">All <span id="allCount">0</span></button><button type="button" class="filter-button" data-filter="active">To do <span id="activeCount">0</span></button><button type="button" class="filter-button" data-filter="completed">Completed <span id="completedCount">0</span></button></div>
+                    <ul class="task-list" id="taskList" aria-live="polite"></ul>
+                    <div class="empty-state" id="emptyState"><span>✦</span><strong>Nothing on the board yet.</strong><p>Add a task above and start building momentum.</p></div>
+                    <div class="board-footer"><span>✦ Progress over perfection.</span><button id="clearCompleted" type="button" class="clear-button">Clear completed</button></div>
+                </div>
+                <p class="storage-note">Tasks are saved in this browser with localStorage and remain available after refreshing on the same device.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#home"><span class="brand-mark">S</span><span>SANKET<span class="brand-light">.DEV</span></span></a><p>Designed & developed by Sanket Sharma · ApexPlanet Internship Task 2</p><a href="#home" class="back-top">Back to top ↑</a></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
